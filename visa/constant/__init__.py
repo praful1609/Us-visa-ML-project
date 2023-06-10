@@ -32,3 +32,4 @@ TRAINING_PIPELINE_NAME_KEY = "pipeline"
 COLUMN_COMPANY_AGE = 'company_age'
 COLUMN_YEAR_ESTB = 'yr_of_estab'
 COLUMN_ID = 'case_id'
+COLUMN_CASE_STATUS = 'case_status'
