@@ -41,7 +41,7 @@ class IngestedDataValidation:
             df = pd.read_csv(self.validate_path)
             count = 0
             for columns in df:
-                if (len([columns]) - df[columns].count() == len(df[columns])):
+                if (len([columns]) - df[columns].count()) == len(df[columns]):
                     count+=1
             return True if (count==0) else False
 
@@ -62,7 +62,8 @@ class IngestedDataValidation:
             df = pd.read_csv(self.validate_path)
             df_columns_name = df.columns
             schema_columns_name = list(self.data['ColumnNames'].keys())
-            return True if(collections.Counter(df_columns_name)==collections.Counter(schema_columns_name)) else False
+
+            return True if(collections.Counter(df_columns_name) == collections.Counter(schema_columns_name)) else False
         except Exception as e:
             raise CustomException(e, sys) from e
 

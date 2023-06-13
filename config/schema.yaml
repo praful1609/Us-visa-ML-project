@@ -1,22 +1,22 @@
 #This file is use to validate our data
-Filename: "Visadataset.csv"
+FileName: "Visadataset.csv"
 
-NumberofColumn: 11 #After dropping case id column
+NumberofColumns: 11 #After dropping case id column
 
-ColumnNames :
+ColumnNames:
   continent: category
   education_of_employee: category
   has_job_experience: category
   requires_job_training: category
   no_of_employees: int
-  yr_of_estab: int
+  company_age: int
   region_of_employment: category
   prevailing_wage: float
   unit_of_wage: category
   full_time_position: category
   case_status: category
 
-Numerical_col: 
+Numerical_columes: 
  - prevailing_wage
 
 Ordinal_columns:
