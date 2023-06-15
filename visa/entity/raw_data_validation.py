@@ -8,16 +8,16 @@ import pandas as pd
 import collections
 
 class IngestedDataValidation:
-    def __init__(self, validation_path, schema_path):
+    def __init__(self, validate_path, schema_path):
         try:
-            self.validate_path = validation_path
+            self.validate_path = validate_path
             self.schema_path = schema_path
             self.data = read_yaml_file(self.schema_path)
         except Exception as e:
             raise CustomException(e, sys) from e
 
-    def validation_filename(self, file_name) -> bool:
-        try:
+    def validate_filename(self, file_name)-> bool:
+        try:        
             print(self.data['FileName'])
             schema_file_name=self.data['FileName']
             if schema_file_name == file_name:
@@ -25,7 +25,7 @@ class IngestedDataValidation:
         except Exception as e:
             raise CustomException(e, sys) from e
 
-    def validation_column_length(self) -> bool:
+    def validate_column_length(self) -> bool:
         try:
             df=pd.read_csv(self.validate_path)
             if (df.shape[1] == self.data['NumberofColumns']):
@@ -41,7 +41,7 @@ class IngestedDataValidation:
             df = pd.read_csv(self.validate_path)
             count = 0
             for columns in df:
-                if (len([columns]) - df[columns].count()) == len(df[columns]):
+                if (len([columns]) - df[columns].count() == len(df[columns])):
                     count+=1
             return True if (count==0) else False
 
@@ -62,7 +62,6 @@ class IngestedDataValidation:
             df = pd.read_csv(self.validate_path)
             df_columns_name = df.columns
             schema_columns_name = list(self.data['ColumnNames'].keys())
-
             return True if(collections.Counter(df_columns_name) == collections.Counter(schema_columns_name)) else False
         except Exception as e:
             raise CustomException(e, sys) from e

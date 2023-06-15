@@ -62,7 +62,7 @@ class Configuration:
             
             data_validation_artifact_dir = os.path.join(
                 artifact_dir,
-                DATA_VALIDATION_ARTIFACT_DIR,
+                DATA_VALIDATION_ARTIFACT_DIR,     
                 self.time_stamp
             )
 
@@ -89,6 +89,7 @@ class Configuration:
             artifact_dir = os.path.join(ROOT_DIR,
                                         training_pipeline_config[TRAINING_PIPELINE_NAME_KEY],
                                         training_pipeline_config[TRAINING_PIPELINE_ARTIFACT_DIR_KEY])
+                    
             training_pipeline_config = TrainingPipelineConfig(artifact_dir=artifact_dir)
             logging.info(f"Training pipeline config completed : {training_pipeline_config}")
             return training_pipeline_config

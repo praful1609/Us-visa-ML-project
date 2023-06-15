@@ -16,7 +16,7 @@ ColumnNames:
   full_time_position: category
   case_status: category
 
-Numerical_columes: 
+Numerical_columns: 
  - prevailing_wage
 
 Ordinal_columns:
