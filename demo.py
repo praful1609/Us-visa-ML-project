@@ -12,6 +12,6 @@ if __name__ == "__main__":
         pipeline = Pipeline()
         pipeline.run_pipeline()
     except Exception as e:
-        logging.info("Training pipeline completed")
+        logging.error(f"{e}")
         raise CustomException(e, sys) from e
 

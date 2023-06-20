@@ -1,8 +1,5 @@
-#This file is use to validate our data
 FileName: "Visadataset.csv"
-
-NumberofColumns: 11 #After dropping case id column
-
+NumberofColumns: 11
 ColumnNames:
   continent: category
   education_of_employee: category
@@ -16,23 +13,22 @@ ColumnNames:
   full_time_position: category
   case_status: category
 
-Numerical_columns: 
- - prevailing_wage
+Numerical_columns:
+  - prevailing_wage
 
-Ordinal_columns:
- - has_job_experience
- - requires_job_training
- - full_time_position
- - education_of_employee
+Oridnal_columns:
+  - has_job_experience
+  - requires_job_training
+  - full_time_position
+  - education_of_employee
 
 Onehot_columns:
- - continent
- - unit of wage
- - region_of_employment
+  - continent
+  - unit_of_wage
+  - region_of_employment
 
-Transformation_of_columns:
- - company_age
- - no_of_employees
+Transformation_columns:
+  - no_of_employees
+  - company_age
 
-Target_column:
- - case_status
+target_column: case_status
