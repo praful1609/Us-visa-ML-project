@@ -1,0 +1,5 @@
+best_model:
+  model_path: C:\Users\Praful Bhojane\OneDrive\Desktop\ML project template\Us-visa-ML-project\us_visa\artifact\model_trainer\2023-06-24-12-21-14\trained_model\model.pkl
+history:
+  2023-06-24-12-21-14:
+    model_path: C:\Users\Praful Bhojane\OneDrive\Desktop\ML project template\Us-visa-ML-project\us_visa\artifact\model_trainer\2023-06-24-11-50-57\trained_model\model.pkl
