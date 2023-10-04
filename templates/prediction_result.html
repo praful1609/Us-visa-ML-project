@@ -1,0 +1,194 @@
+<html>
+
+<body>
+    <div class="login">
+        <h1>Welcome to US VISA Approval Prediction Indicator</h1>
+
+        <form action="{{ url_for('predict_datapoint')}}" method="post">
+            <h1>
+                <legend>US VISA Approval Prediction</legend>
+            </h1>
+            <div class="mb-3">
+                <label class="form-label">Prevailing Wage</label>
+                <input class="form-control" type="number" name="prevailing_wage" placeholder="Enter prevailing wage"
+                    min="0" oninput="validity.valid||(value='');">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Has a Job Experience</label>
+                <select class="form-control" name="has_job_experience" placeholder="Enter your job Experience" required>
+                    <option class="placeholder" selected disabled value="">Do you have any job experience</option>
+                    <option value="Y">
+                        Yes
+                    </option>
+                    <option value="N">
+                        No
+                    </option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Requires Job Training</label>
+                <select class="form-control" name="requires_job_training" placeholder="Do you neet job training"
+                    required>
+
+                    <option class="placeholder" selected disabled value="">Do you need job training</option>
+                    <option value="Y">
+                        Yes
+                    </option>
+                    <option value="N">
+                        No
+                    </option>
+
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Full Time Position</label>
+                <select class="form-control" name="full_time_position" placeholder="Do you have full time position"
+                    required>
+
+                    <option class="placeholder" selected disabled value="Do you have full time position"></option>
+                    <option value="Y">
+                        Yes
+                    </option>
+
+                    <option value="N">
+                        No
+                    </option>
+
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Education Of Employee</label>
+                <select class="form-control" name="eduaction_of_employee" placeholder="Enter Your Education" required>
+
+                    <option class="placeholder" selected disabled value="">Select Education</option>
+                    <option value="High School">
+                        High School
+                    </option>
+
+                    <option value="Master's">
+                        Master's
+                    </option>
+
+                    <option value="Bachelor's">
+                        Bachelor's
+                    </option>
+
+                    <option value="Doctorate">
+                        Doctorate
+                    </option>
+
+                </select>
+            </div>
+
+            
+            <div class="mb-3">
+                <label class="form-label">Continent</label>
+                <select class="form-control" name="continent" placeholder="Enter your continent" required>
+                    <option class="placeholder" selected disabled value="">Select your continent</option>
+                    <option value="Asia">
+                        Asia
+                    </option>
+
+                    <option value="Africa">
+                        Africa
+                    </option>
+
+                    <option value="North America">
+                        North America
+                    </option>
+
+                    <option value="Europe">
+                        Europe
+                    </option>
+
+                    <option value="South America">
+                        South America
+                    </option>
+
+                    <option value="Oceania">
+                        Oceania
+                    </option>
+
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Unit Of Wage</label>
+                <select class="form-control" name="unit_of_wage" placeholder="Select Unit of Wage" required>
+
+                    <option class="placeholder" selected disabled value="">Select Unit of Wage</option>
+                    <option value="Hour">
+                        Hour
+                    </option>
+
+                    <option value="Year">
+                        Year
+                    </option>
+
+                    <option value="Week">
+                        Week
+                    </option>
+
+                    <option value="Month">
+                        Month
+                    </option>
+
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Region of Employment</label>
+                <select class="form-control" name="region_of_employment" placeholder="Select Region of Employment"
+                    required>
+
+                    <option class="placeholder" selected disabled value="">Select Region of Employment</option>
+                    <option value="West">
+                        West
+                    </option>
+
+                    <option value="Northeast">
+                        Northeast
+                    </option>
+
+                    <option value="South">
+                        South
+                    </option>
+
+                    <option value="Midwest">
+                        Midwest
+                    </option>
+
+                    <option value="Island">
+                        Island
+                    </option>
+
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Number of Employees</label>
+                <input class="form-control" type="number" name="no_of_employees"
+                    placeholder="Enter number of employees" min="0" oninput="validity.valid||(value='');">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Company Age</label>
+                <input class="form-control" type="number" name="company_age" placeholder="Enter your company age"
+                    min='0' max='100' />
+            </div>
+
+
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Predict your results" required />
+            </div>
+        </form>
+        <h2>
+            The Prediction is {{result}}
+        </h2>
+</body>
+
+</html>

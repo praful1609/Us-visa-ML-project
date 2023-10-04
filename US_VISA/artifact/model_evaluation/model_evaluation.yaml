@@ -1,5 +1,19 @@
 best_model:
-  model_path: C:\Users\Praful Bhojane\OneDrive\Desktop\ML project template\Us-visa-ML-project\us_visa\artifact\model_trainer\2023-06-24-12-21-14\trained_model\model.pkl
+  model_path: C:\Users\Praful Bhojane\OneDrive\Desktop\ML project template\Us-visa-ML-project\us_visa\artifact\model_trainer\2023-10-04-20-06-39\trained_model\model.pkl
 history:
   2023-06-24-12-21-14:
     model_path: C:\Users\Praful Bhojane\OneDrive\Desktop\ML project template\Us-visa-ML-project\us_visa\artifact\model_trainer\2023-06-24-11-50-57\trained_model\model.pkl
+  2023-09-28-19-34-35:
+    model_path: C:\Users\Praful Bhojane\OneDrive\Desktop\ML project template\Us-visa-ML-project\us_visa\artifact\model_trainer\2023-06-24-12-21-14\trained_model\model.pkl
+  2023-10-02-19-33-59:
+    model_path: C:\Users\Praful Bhojane\OneDrive\Desktop\ML project template\Us-visa-ML-project\us_visa\artifact\model_trainer\2023-09-28-19-34-35\trained_model\model.pkl
+  2023-10-03-18-11-21:
+    model_path: C:\Users\Praful Bhojane\OneDrive\Desktop\ML project template\Us-visa-ML-project\us_visa\artifact\model_trainer\2023-10-02-19-33-59\trained_model\model.pkl
+  2023-10-03-23-23-46:
+    model_path: C:\Users\Praful Bhojane\OneDrive\Desktop\ML project template\Us-visa-ML-project\us_visa\artifact\model_trainer\2023-10-03-18-11-21\trained_model\model.pkl
+  2023-10-04-11-43-09:
+    model_path: C:\Users\Praful Bhojane\OneDrive\Desktop\ML project template\Us-visa-ML-project\us_visa\artifact\model_trainer\2023-10-03-23-23-46\trained_model\model.pkl
+  2023-10-04-18-59-13:
+    model_path: C:\Users\Praful Bhojane\OneDrive\Desktop\ML project template\Us-visa-ML-project\us_visa\artifact\model_trainer\2023-10-04-11-43-09\trained_model\model.pkl
+  2023-10-04-20-06-39:
+    model_path: C:\Users\Praful Bhojane\OneDrive\Desktop\ML project template\Us-visa-ML-project\us_visa\artifact\model_trainer\2023-10-04-18-59-13\trained_model\model.pkl

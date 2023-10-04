@@ -45,15 +45,15 @@ class DataTransformation:
             ]
             )
             
-            onehot_pipeline= Pipeline(steps=[
+            ordinal_pipeline= Pipeline(steps=[
                 ('imputer', SimpleImputer(strategy='most_frequent')),
                 ('oridnal_encoder', OrdinalEncoder()),
                 ('scaler', StandardScaler(with_mean=False))
             ])
 
-            ordinal_pipeline = Pipeline(steps=[
+            onehot_pipeline = Pipeline(steps=[
                 ('imputer', SimpleImputer(strategy='most_frequent')),
-                ('one_hot_encoder', OneHotEncoder()),
+                ('one_hot_encoder', OneHotEncoder(handle_unknown='ignore')),
                 ('scaler', StandardScaler(with_mean=False))
             ]
             )
@@ -157,6 +157,7 @@ class DataTransformation:
             transformed_test_file_path = os.path.join(transformed_test_dir, test_file_name)
 
             logging.info(f"Saving transformed training and test array.")
+            logging.info(train_arr)
 
             save_numpy_array_data(file_path=transformed_train_file_path, array=train_arr)
             save_numpy_array_data(file_path=transformed_test_file_path, array=test_arr)
